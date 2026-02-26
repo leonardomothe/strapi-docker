@@ -3,12 +3,13 @@ services:
     image: node:20-alpine
     container_name: strapi_app
     working_dir: /srv/app
-    environment:
-      NODE_TLS_REJECT_UNAUTHORIZED: "0"
-      npm_config_strict_ssl: "false"
-    volumes:
-      - ./app:/srv/app
     ports:
       - "1337:1337"
+    environment:
+      NODE_ENV: development
+      NODE_TLS_REJECT_UNAUTHORIZED: "0"
+      npm_config_strict_ssl: "false"
+      JWT_SECRET: "POp0hFF9TxGdJhp/kJQxW3H+Q4365nhJG/J6+OI7lo8="
+    volumes:
+      - ./app:/srv/app
     command: sh -c "npm install && npm run develop"
-
