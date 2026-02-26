@@ -1,47 +1,50 @@
-Strapi v5 + Docker
+# 🚀 Strapi v5 + Docker
 
-Projeto Strapi v5 configurado para rodar em ambiente Docker, pronto para desenvolvimento local e preparado para evolução para produção.
+Projeto **Strapi v5** configurado para rodar em ambiente **Docker**, pronto para desenvolvimento local e preparado para evolução para produção.
 
-Tecnologias Utilizadas
+---
 
-Node.js 20 (Alpine)
+# 📦 Tecnologias Utilizadas
 
-Strapi v5
+- **Node.js 20 (Alpine)**
+- **Strapi v5**
+- **SQLite (default)**
+- **Docker**
+- **Docker Compose**
 
-SQLite (default)
+---
 
-Docker
+# 📁 Estrutura do Projeto
 
-Docker Compose
 
-Estrutura do Projeto
 strapi-docker/
-├── app/                  # Aplicação Strapi
+├── app/ # Aplicação Strapi
 ├── docker-compose.yml
 ├── Dockerfile
 ├── .dockerignore
 ├── README.md
 └── .env.example
-Pré-requisitos
+
+
+---
+
+# ⚙️ Pré-requisitos
 
 Antes de rodar o projeto, você precisa ter instalado:
 
-Docker
-
-Docker Compose
+- Docker
+- Docker Compose
 
 Verifique:
 
+```bash
 docker -v
 docker compose version
-Como Rodar o Projeto
-
-1 - Clonar o repositório
-
+▶️ Como Rodar o Projeto
+1️⃣ Clonar o repositório
 git clone https://github.com/leonardomothe/strapi-docker.git
 cd strapi-docker
-
-2 - Configurar variáveis de ambiente
+2️⃣ Configurar variáveis de ambiente
 
 Copie o arquivo de exemplo:
 
@@ -58,12 +61,9 @@ ADMIN_JWT_SECRET=
 APP_KEYS=
 API_TOKEN_SALT=
 TRANSFER_TOKEN_SALT=
-
-3 - Subir o ambiente
-
+3️⃣ Subir o ambiente
 docker compose up -d
-
-4 - Acessar a aplicação
+4️⃣ Acessar a aplicação
 
 Admin:
 
@@ -72,21 +72,16 @@ http://localhost:1337/admin
 API:
 
 http://localhost:1337
-
-Comandos Úteis
-
-Ver logs
+🛠 Comandos Úteis
+🔍 Ver logs
 docker logs -f strapi_app
-
-Parar o ambiente
+🛑 Parar o ambiente
 docker compose down
-
-Rebuild completo (caso algo quebre)
+🔄 Rebuild completo (caso algo quebre)
 docker compose down -v
 docker compose build --no-cache
 docker compose up -d
-
-Ambiente de Desenvolvimento
+💻 Ambiente de Desenvolvimento
 
 O projeto está configurado para rodar com:
 
@@ -100,7 +95,7 @@ Build automático do admin
 
 Logs detalhados
 
-* Ambiente de Produção *
+🏭 Ambiente de Produção
 
 Para produção recomenda-se:
 
@@ -120,7 +115,7 @@ npm run start
 Ou via Docker:
 
 NODE_ENV=production docker compose up -d
-Banco de Dados
+🗄 Banco de Dados
 
 Atualmente o projeto usa:
 
@@ -132,33 +127,33 @@ PostgreSQL
 
 MySQL
 
-Variáveis Importantes
+🔐 Variáveis Importantes
 Variável	Descrição
 JWT_SECRET	Secret usado pelo plugin users-permissions
 ADMIN_JWT_SECRET	Secret do painel admin
 APP_KEYS	Chaves internas do Strapi
 API_TOKEN_SALT	Salt para tokens de API
 TRANSFER_TOKEN_SALT	Salt para tokens de transferência
-Segurança
+🔒 Segurança
 
-O .env não está versionado.
+O .env não está versionado
 
-Nunca commite secrets reais.
+Nunca commite secrets reais
 
-Gere novas chaves para cada ambiente.
+Gere novas chaves para cada ambiente
 
-Problemas Comuns
-Erro: Missing jwtSecret
+🧯 Problemas Comuns
+❌ Erro: Missing jwtSecret
 
 Significa que o .env não está configurado corretamente.
 
 Solução:
 
-Verifique se as variáveis estão definidas.
+Verifique se as variáveis estão definidas
 
-Recrie o container após alterar .env.
+Recrie o container após alterar .env
 
-Admin não abre
+❌ Admin não abre
 
 Execute:
 
@@ -168,16 +163,3 @@ Se necessário:
 
 docker compose down -v
 docker compose up -d
-Contribuição
-
-Fork o projeto
-
-Crie uma branch
-
-Commit suas alterações
-
-Abra um Pull Request
-
-Licença
-
-Este projeto está sob a licença MIT.
