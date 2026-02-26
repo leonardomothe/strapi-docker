@@ -35,10 +35,13 @@ Verifique:
 docker -v
 docker compose version
 Como Rodar o Projeto
-1️⃣ Clonar o repositório
+
+1 - Clonar o repositório
+
 git clone https://github.com/leonardomothe/strapi-docker.git
 cd strapi-docker
-2️⃣ Configurar variáveis de ambiente
+
+2 - Configurar variáveis de ambiente
 
 Copie o arquivo de exemplo:
 
@@ -55,9 +58,12 @@ ADMIN_JWT_SECRET=
 APP_KEYS=
 API_TOKEN_SALT=
 TRANSFER_TOKEN_SALT=
-3️⃣ Subir o ambiente
+
+3 - Subir o ambiente
+
 docker compose up -d
-4️⃣ Acessar a aplicação
+
+4 - Acessar a aplicação
 
 Admin:
 
