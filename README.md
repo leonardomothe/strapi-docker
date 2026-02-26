@@ -72,15 +72,20 @@ http://localhost:1337/admin
 API:
 
 http://localhost:1337
+
 Comandos Úteis
+
 Ver logs
 docker logs -f strapi_app
+
 Parar o ambiente
 docker compose down
+
 Rebuild completo (caso algo quebre)
 docker compose down -v
 docker compose build --no-cache
 docker compose up -d
+
 Ambiente de Desenvolvimento
 
 O projeto está configurado para rodar com:
@@ -95,7 +100,7 @@ Build automático do admin
 
 Logs detalhados
 
-Ambiente de Produção
+* Ambiente de Produção *
 
 Para produção recomenda-se:
 
